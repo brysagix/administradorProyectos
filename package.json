@@ -19,7 +19,10 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "reactstrap": "^9.0.1",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    
+    "file-loader": "^6.2.0",
+    "url-loader": "^4.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
