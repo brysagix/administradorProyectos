@@ -10,6 +10,9 @@ function Contenido() {
     <div>
       <Row >
         <Col sm={9}>
+
+
+          {/**
           <Carousel>
             <Carousel.Item>
               <img width={900} height={420} alt="900x500"
@@ -35,9 +38,25 @@ function Contenido() {
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </Carousel.Caption>
             </Carousel.Item>
-
             
+            <Carousel.Item>
+              <img width={900} height={420}
+                className="d-block w-100"
+                src={require("../../assets/images/imagen3.jpg").default}
+                alt="Third slide"
+              />
+
+              <Carousel.Caption>
+                <h3>Third slide label</h3>
+                <p>
+                  Praesent commodo cursus magna, vel scelerisque nisl
+                  consectetur.
+                </p>
+              </Carousel.Caption>
+            </Carousel.Item>
           </Carousel>
+          */ }
+
         </Col>
 
         <Col sm={3}>   
