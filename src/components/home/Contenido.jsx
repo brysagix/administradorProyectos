@@ -2,7 +2,9 @@ import React from "react";
 import { Carousel, Container, Row, Col } from "react-bootstrap";
 import CrearUsuario from '../usuarios/CrearUsuario';
 
-import myimage from "./imgHome/imagen1.jpg"
+import myimage1 from "../../assets/images/imagen1.jpg"
+import myimage2 from "../../assets/images/imagen2.jpg"
+import myimage3 from "../../assets/images/imagen3.jpg"
 
 function Contenido() {
   return (
@@ -18,7 +20,7 @@ function Contenido() {
               <img width={900} height={420} alt="900x500"
                 className="d-block w-100"
                 alt="First slide"
-                src={myimage}
+                src={myimage1}
               />
               <Carousel.Caption>
                 <h3>First slide label</h3>
@@ -31,7 +33,7 @@ function Contenido() {
               <img width={900} height={420}
                 className="d-block w-100"
                 alt="Second slide"
-                src={myimage}
+                src={myimage2}
               />
               <Carousel.Caption>
                 <h3>Second slide label</h3>
@@ -42,7 +44,7 @@ function Contenido() {
             <Carousel.Item>
               <img width={900} height={420}
                 className="d-block w-100"
-                src={myimage}
+                src={myimage3}
                 alt="Third slide"
               />
 
