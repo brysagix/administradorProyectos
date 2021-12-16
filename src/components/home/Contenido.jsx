@@ -12,12 +12,12 @@ function Contenido() {
         <Col sm={9}>
 
 
-          {/**
+          
           <Carousel>
             <Carousel.Item>
               <img width={900} height={420} alt="900x500"
                 className="d-block w-100"
-                src={require("../../assets/images/imagen1.jpg").default}
+                src="../../../src/assets/images/imagen1.jpg"
                 alt="First slide"
               />
               <Carousel.Caption>
@@ -30,7 +30,7 @@ function Contenido() {
             <Carousel.Item>
               <img width={900} height={420}
                 className="d-block w-100"
-                src={require("../../assets/images/imagen2.jpg").default}
+                src="../../../src/assets/images/imagen1.jpg"
                 alt="Second slide"
               />
               <Carousel.Caption>
@@ -42,7 +42,7 @@ function Contenido() {
             <Carousel.Item>
               <img width={900} height={420}
                 className="d-block w-100"
-                src={require("../../assets/images/imagen3.jpg").default}
+                src="../../../src/assets/images/imagen1.jpg"
                 alt="Third slide"
               />
 
@@ -55,7 +55,7 @@ function Contenido() {
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
-          */ }
+          
 
         </Col>
 
