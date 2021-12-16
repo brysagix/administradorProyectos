@@ -360,6 +360,7 @@ function Proyectos() {
     window.location.reload(false);
   }
 
+ 
   function handlerEliminarProject(keyValue) {
     alert("Elimando proyecto " + keyValue);
 
@@ -371,6 +372,7 @@ function Proyectos() {
     window.location.reload(false);
   }
 
+  
   function handlerEditarProject(nombre,iPrincipal,investigadores,objPrincipal,objSecundario,estado,presupuesto,avances,habilitado) {
 
     setNombreProyecto(nombre);
