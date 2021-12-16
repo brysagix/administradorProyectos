@@ -13,6 +13,8 @@ import {
 
 import { client } from "./graphql/ApolloClient.js";
 
+console.log("Conectandose a Apollo");
+
 
 ReactDOM.render(
 
