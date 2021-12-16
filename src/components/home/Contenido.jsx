@@ -2,7 +2,6 @@ import React from "react";
 import { Carousel, Container, Row, Col } from "react-bootstrap";
 import CrearUsuario from '../usuarios/CrearUsuario';
 
-import myimage from "./imgHome/imagen1.jpg"
 
 function Contenido() {
   return (
@@ -40,7 +39,6 @@ function Contenido() {
             <Carousel.Item>
               <img width={900} height={420}
                 className="d-block w-100"
-                src={myimage}
                 alt="Third slide"
               />
 
