@@ -18,7 +18,7 @@ function Contenido() {
             <Carousel.Item>
               <img width={900} height={420} alt="900x500"
                 className="d-block w-100"
-                src={myimage}
+                src="../../assets/images/imagen1.jpg"
                 alt="First slide"
               />
               <Carousel.Caption>
@@ -31,7 +31,7 @@ function Contenido() {
             <Carousel.Item>
               <img width={900} height={420}
                 className="d-block w-100"
-                src={myimage}
+                src="../../assets/images/imagen1.jpg"
                 alt="Second slide"
               />
               <Carousel.Caption>
@@ -43,7 +43,7 @@ function Contenido() {
             <Carousel.Item>
               <img width={900} height={420}
                 className="d-block w-100"
-                src={myimage}
+                src="../../assets/images/imagen1.jpg"
                 alt="Third slide"
               />
 
