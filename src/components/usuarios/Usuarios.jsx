@@ -372,7 +372,7 @@ else{
         personalID: keyValue,
       },
     });
-    window.location.reload(false);
+    //window.location.reload(false);
   }
 
   function handlerEditarUser(nom, apelli,personId,corr, role, estat) {
