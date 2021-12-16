@@ -23,9 +23,9 @@ function Contenido() {
                 src={myimage1}
               />
               <Carousel.Caption>
-                <h3>First slide label</h3>
+                <h3>Investiga</h3>
                 <p>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
+                  Siempre hay que crear nuevo conocimiento
                 </p>
               </Carousel.Caption>
             </Carousel.Item>
@@ -36,8 +36,8 @@ function Contenido() {
                 src={myimage2}
               />
               <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h3>Desarrolla</h3>
+                <p>Implementa tus ideas</p>
               </Carousel.Caption>
             </Carousel.Item>
             
@@ -47,12 +47,12 @@ function Contenido() {
                 src={myimage3}
                 alt="Third slide"
               />
+              
 
               <Carousel.Caption>
-                <h3>Third slide label</h3>
+                <h3>Comparte</h3>
                 <p>
-                  Praesent commodo cursus magna, vel scelerisque nisl
-                  consectetur.
+                  Trabaja activamente en la comunidad
                 </p>
               </Carousel.Caption>
             </Carousel.Item>

@@ -153,8 +153,8 @@ function UsuariosHowLider() {
           <Dropdown.Item onClick={(e) => setEstado("Pendiente")}>
             Pendiente
           </Dropdown.Item>
-          <Dropdown.Item onClick={(e) => setEstado("Autorizado")}>
-            Autorizado
+          <Dropdown.Item onClick={(e) => setEstado("Activo")}>
+            Activo
           </Dropdown.Item>
         </DropdownButton>
       </FormGroup>

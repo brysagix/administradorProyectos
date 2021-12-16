@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, Button, Container, Table, FormGroup } from "react-bootstrap";
+import { Card, Button, Container, Table,FormGroup,Dropdown,DropdownButton  } from "react-bootstrap";
 
 import Forbiden from "../shared/forbiden/Forbiden";
 
@@ -272,15 +272,18 @@ function Usuarios() {
           </FormGroup>
 
           <FormGroup>
-            <label>Estado:</label>
-            <input
-              className="form-control"
-              name="estado"
-              type="text"
-              onChange={(e) => setEstado(e.target.value)}
-              placeholder={estado}
-            />
-          </FormGroup>
+        <label>Estado:</label>
+        <DropdownButton variant="outline-secondary" title={estado}>
+          <Dropdown.Item onClick={(e) => setEstado("Pendiente")}>
+            Pendiente
+          </Dropdown.Item>
+          <Dropdown.Item onClick={(e) => setEstado("Activo")}>
+            Autorizado
+          </Dropdown.Item>
+        </DropdownButton>
+      </FormGroup>
+
+
         </ModalBody>
 
         <ModalFooter>

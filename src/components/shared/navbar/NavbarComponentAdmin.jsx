@@ -13,7 +13,7 @@ function NavbarComponent() {
     <>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand">Plataforma de Ventas para Admin</a>
+          <a class="navbar-brand">Plataforma de Proyectos para Admin</a>
 
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
