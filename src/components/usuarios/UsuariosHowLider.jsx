@@ -222,7 +222,7 @@ function UsuariosHowLider() {
         estado: estado,
       },
     });
-    window.location.reload(false);
+     //****window.location.reload(false);
     setVarShow(false);
   }
 

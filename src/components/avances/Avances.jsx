@@ -119,7 +119,7 @@ function Proyectos() {
 
   // Fin GraphQL
 
-  const infoInicial = "Proyectos Almacenados en el sistema  HOW ADMIN";
+  const infoInicial = "Avances de los proyectos en el sistema";
 
   let tipoUsuario = Validar();
   console.log(tipoUsuario);
@@ -379,7 +379,8 @@ function Proyectos() {
         avances: avanceParaBorr,
       },
     });
-    window.location.reload(false);
+     //****window.location.reload(false);
+     handlerCerrarOpcionesAvance();
   }
 
   function handlerCargarModalAvance() {
@@ -421,7 +422,10 @@ function Proyectos() {
       },
     });
 
-    window.location.reload(false);
+     //****window.location.reload(false);
+     setNuevaObservacion("");
+     handlerCerrarOpcionesAvance();
+
   }
 
   function handlerEliminarObservacionPuntual(observacion, autor) {
@@ -438,7 +442,7 @@ function Proyectos() {
   }
 
   function handlerActualizarPage() {
-    window.location.reload(false);
+  window.location.reload(false);
   }
 }
 

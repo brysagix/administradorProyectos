@@ -99,7 +99,7 @@ function CrearUsuario() {
       </FormGroup>
       <br />
       <Button color="primary" onClick={() => handlerCrearUsuario()}>
-        Sign In
+        Sign Up
       </Button>{" "}
       {""}
 
@@ -123,8 +123,17 @@ function CrearUsuario() {
     });
 
     alert("Usuario Creado");
-    //window.location.reload(false);
+     //****window.location.reload(false);
+
+    setNombre("");
+    setApellido("");
+    setPersonalID(0);
+    setCorreo("");
+    setRol("Seleccione un Rol");
   }
+
+
+
 }
 
 export default CrearUsuario;

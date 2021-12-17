@@ -132,6 +132,10 @@ function EditPerfil() {
       
       <br />
       <Button color="primary" onClick={() => handlerEnviarEditUser(datosPerfil)}>
+        Cambiar Datos
+      </Button>{" "}
+
+      <Button color="primary" onClick={() => handlerActualizarPage()}>
         Actualizar
       </Button>{" "}
 
@@ -165,13 +169,14 @@ else{
       },
     });
 
-
     alert("Datos Actualizados")
-    window.location.reload(false);
-
+     //****window.location.reload(false);
 
   }
 
+  function handlerActualizarPage() {
+    window.location.reload(false);
+  }
 
 
 

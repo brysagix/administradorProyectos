@@ -126,7 +126,7 @@ function Proyectos() {
 
   // Fin GraphQL
 
-  const infoInicial = "Proyectos Almacenados en el sistema  HOW ESTUDIANTE";
+  const infoInicial = "Proyectos Almacenados en el sistema";
 
   let tipoUsuario = Validar();
   console.log(tipoUsuario);
@@ -284,61 +284,6 @@ function Proyectos() {
           </ModalFooter>
         </Modal>
 
-
-
-        {/*
-        <Modal isOpen={varShowAvance}>
-          <ModalHeader>
-            <div>
-              <h3>Datos del Avance</h3>
-            </div>
-          </ModalHeader>
-
-          <ModalBody>
-            <FormGroup>
-              <input
-                className="form-control"
-                name="avance"
-                type="text"
-                placeholder={nuevaObservacion}
-                onChange={(e) => setNuevaObservacion(e.target.value)}
-              />
-            </FormGroup>
-          </ModalBody>
-
-          <ModalFooter>
-            <Button
-              color="primary"
-              onClick={() =>
-                handlerCrearObservacion(proyectoBuscado, avanceParaBorrar)
-              }
-            >
-              Agregar Observación
-            </Button>
-
-
-            <Button
-              className="btn btn-danger"
-              onClick={() =>
-                handlerEliminarAvance(proyectoBuscado, avanceParaBorrar)
-              }
-            >
-              Eliminar Avance
-            </Button>
-
-            <Button
-              className="btn btn-danger"
-              onClick={() => handlerCerrarOpcionesAvance()}
-            >
-              Cancelar
-            </Button>
-          </ModalFooter>
-        </Modal>
-      
-      
-      */ }
-
-
       </>
     );
   } else {
@@ -359,7 +304,7 @@ function Proyectos() {
 
     //*******
     setAvanceParaBuscarObservaciones(avance);
-    //window.location.reload(false);
+     //****window.location.reload(false);
   }
 
   function handlerCerrarOpcionesAvance() {
@@ -374,7 +319,7 @@ function Proyectos() {
         avances: avanceParaBorr,
       },
     });
-    window.location.reload(false);
+     //****window.location.reload(false);
   }
 
   function handlerCargarModalAvance() {
@@ -416,7 +361,7 @@ function Proyectos() {
       },
     });
 
-    window.location.reload(false);
+     //****window.location.reload(false);
   }
 
   function handlerEliminarObservacionPuntual(observacion, autor) {

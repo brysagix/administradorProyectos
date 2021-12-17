@@ -30,12 +30,12 @@ function Usuarios() {
   const [invisibleBotonActualizar, setInvisibleBotonActualizar] = useState(true);
   const [invisibleBotonInsertar, setInvisibleBotonInsertar] = useState(true);
 
-  const [nombre, setNombre] = useState();
-  const [apellido, setApellido] = useState();
+  const [nombre, setNombre] = useState("");
+  const [apellido, setApellido] = useState("");
   const [personalID, setPersonalID] = useState();
-  const [correo, setCorreo] = useState();
-  const [rol, setRol] = useState();
-  const [estado, setEstado] = useState();
+  const [correo, setCorreo] = useState("");
+  const [rol, setRol] = useState("Estudiante");
+  const [estado, setEstado] = useState("Pendiente");
   const [canDatos, setCanDatos] = useState();
 
   const [userAutenti, setUserAutenti] = useState("");
@@ -186,12 +186,7 @@ function Usuarios() {
           Actualizar
         </Button>{" "}
 
-        <Button
-          className="btn btn-danger"
-          onClick={() => handlerSearch()}
-        >
-          Test
-        </Button>
+  
 
      
 
@@ -260,16 +255,23 @@ function Usuarios() {
             />
           </FormGroup>
 
+     
+
           <FormGroup>
-            <label>Rol:</label>
-            <input
-              className="form-control"
-              name="rol"
-              type="text"
-              onChange={(e) => setRol(e.target.value)}
-              placeholder={rol}
-            />
-          </FormGroup>
+        <label>Rol:</label>
+
+        <DropdownButton variant="outline-secondary" title={rol}>
+          <Dropdown.Item onClick={(e) => setRol("Administrador")}>
+            Administrador
+          </Dropdown.Item>
+          <Dropdown.Item onClick={(e) => setRol("Lider")}>
+            Lider
+          </Dropdown.Item>
+          <Dropdown.Item onClick={(e) => setRol("Estudiante")}>
+            Estudiante
+          </Dropdown.Item>
+        </DropdownButton>
+      </FormGroup>
 
           <FormGroup>
         <label>Estado:</label>
@@ -358,7 +360,7 @@ else{
 
     setVarShow(false);
     alert("Usuario Creado");
-    window.location.reload(false);
+     //****window.location.reload(false);
   }
 
 
@@ -401,7 +403,7 @@ else{
         estado: estado,
       },
     });
-    window.location.reload(false);
+     //****window.location.reload(false);
     setVarShow(false);
   }
 

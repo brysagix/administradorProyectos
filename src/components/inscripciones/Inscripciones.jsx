@@ -150,7 +150,7 @@ function Proyectos() {
         proyecto:nombreProyecto
       },
     });
-    window.location.reload(false);
+     //****window.location.reload(false);
   }
 
   function handlerAceptarInscripcion(nombreEstudiante,nombreProyecto,decision) {
@@ -171,7 +171,7 @@ function Proyectos() {
     });
 
     //setBotonAceptar(true);
-    window.location.reload(false);
+    //**** window.location.reload(false);
   }
 
   function handlerActualizarPage() {

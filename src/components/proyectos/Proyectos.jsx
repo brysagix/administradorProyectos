@@ -25,7 +25,7 @@ function Proyectos() {
   const [objSecundario, setObjSecundario] = useState("");
   const [estadoProyecto, setEstadoProyecto] = useState("Detenido");
   const [presupuesto, setPresupuesto] = useState(0);
-  const [avances, setAvances] = useState("");
+  const [avances, setAvances] = useState();
   const [habilitado, setHabilitado] = useState("Inactivo");
 
   const { user, isAuthenticated } = useAuth0();
@@ -87,7 +87,6 @@ function Proyectos() {
                 <th>Objetivos Secundarios</th>
                 <th>Estado</th>
                 <th>Presupuesto</th>
-                <th>Avances</th>
                 <th>Habilitado</th>
               </tr>
             </thead>
@@ -103,7 +102,6 @@ function Proyectos() {
                     <td>{datos.objSecundario}</td>
                     <td>{datos.estado}</td>
                     <td>{datos.presupuesto}</td>
-                    <td>{datos.avances}</td>
                     <td>{datos.habilitado}</td>
                
 
@@ -276,16 +274,6 @@ function Proyectos() {
               />
             </FormGroup>
 
-            <FormGroup>
-              <label>Avances del proyecto:</label>
-              <input
-                className="form-control"
-                name="personaje"
-                type="text"
-                onChange={(e) => setAvances(e.target.value)}
-                placeholder={avances}
-              />
-            </FormGroup>
           </ModalBody>
 
           <ModalFooter>
@@ -357,7 +345,7 @@ function Proyectos() {
 
     setVarShow(false);
     alert("Proyecto Creado");
-    window.location.reload(false);
+    //****window.location.reload(false);
   }
 
  
@@ -369,7 +357,7 @@ function Proyectos() {
         nombre: keyValue,
       },
     });
-    window.location.reload(false);
+     //****window.location.reload(false);
   }
 
   
@@ -407,8 +395,9 @@ function Proyectos() {
         habilitado: habilitado,
       },
     });
-    window.location.reload(false);
+     //****window.location.reload(false);
     setVarShow(false);
+    setIprincipal("");
   }
 
   function handlerActualizarPage() {

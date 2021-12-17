@@ -26,7 +26,7 @@ function Proyectos() {
   const [objSecundario, setObjSecundario] = useState("");
   const [estadoProyecto, setEstadoProyecto] = useState("Detenido");
   const [presupuesto, setPresupuesto] = useState(0);
-  const [avances, setAvances] = useState("");
+  const [avances, setAvances] = useState();
   const [habilitado, setHabilitado] = useState("Inactivo");
 
   const [nombreProyectoSeleccionado, setNombreProyectoSeleccionado] = useState();
@@ -81,7 +81,7 @@ function Proyectos() {
 
   // Fin GraphQL
 
-  const infoInicial = "Proyectos Almacenados en el sistema HOW LIDER";
+  const infoInicial = "Proyectos Almacenados en el sistema";
 
   
   {isAuthenticated ? localStorage.setItem("correo",user.email):localStorage.setItem("correo","")}
@@ -214,7 +214,6 @@ function Proyectos() {
                 <th>Objetivos Secundarios</th>
                 <th>Estado</th>
                 <th>Presupuesto</th>
-                <th>Avances</th>
                 <th>Habilitado</th>
               </tr>
             </thead>
@@ -228,7 +227,6 @@ function Proyectos() {
                     <td>{objSecundarioSeleccionado}</td>
                     <td>{estadoProyectoSeleccionado}</td>
                     <td>{presupuestoSeleccionado}</td>
-                    <td>{avancesSeleccionado}</td>
                     <td>{habilitadoSeleccionado}</td>
                   </tr>
             </tbody>
@@ -442,7 +440,7 @@ function Proyectos() {
 
     setVarShow(false);
     alert("Proyecto Creado");
-    window.location.reload(false);
+     //****window.location.reload(false);
   }
 
   function handlerEliminarProject(keyValue) {
@@ -453,7 +451,7 @@ function Proyectos() {
         nombre: keyValue,
       },
     });
-    window.location.reload(false);
+    //**** window.location.reload(false);
   }
 
   function handlerEditarProject(nombre,iPrincipal,investigadores,objPrincipal,objSecundario,estado,presupuesto,avances,habilitado) {
@@ -490,7 +488,7 @@ function Proyectos() {
         habilitado: habilitado,
       },
     });
-    window.location.reload(false);
+     //****window.location.reload(false);
     setVarShow(false);
   }
 
@@ -500,7 +498,7 @@ function Proyectos() {
 
 
   function handlerCargarDatosProject() {
-    window.location.reload(false);
+     //****window.location.reload(false);
   }
   
   function handlerCargarDatosProject(

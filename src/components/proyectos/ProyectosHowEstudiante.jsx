@@ -44,7 +44,7 @@ function Proyectos() {
 
   // Fin GraphQL
 
-  const infoInicial = "Proyectos Almacenados en el sistema HOW Estudiante";
+  const infoInicial = "Proyectos Almacenados en el sistema";
 
   let tipoUsuario = Validar();
   console.log(tipoUsuario);
@@ -140,7 +140,7 @@ function Proyectos() {
     
     
     alert("Inscripción Enviada");
-    window.location.reload(false);
+    //**** window.location.reload(false);
   }
 
 

@@ -127,7 +127,7 @@ function Proyectos() {
 
   // Fin GraphQL
 
-  const infoInicial = "Proyectos Almacenados en el sistema  HOW LIDER";
+  const infoInicial = "Proyectos Almacenados en el sistema";
 
   let tipoUsuario = Validar();
   console.log(tipoUsuario);
@@ -361,7 +361,7 @@ function Proyectos() {
   function handlerCargarAvances(nombreProyecto) {
     //alert(nombreProyecto)
     setProyectoBuscado(nombreProyecto);
-    //window.location.reload(false);
+     //****window.location.reload(false);
   }
 
   function handlerVerOpcionesAvance(avance) {
@@ -372,7 +372,7 @@ function Proyectos() {
 
     //*******
     setAvanceParaBuscarObservaciones(avance);
-    //window.location.reload(false);
+     //****window.location.reload(false);
   }
 
   function handlerCerrarOpcionesAvance() {
@@ -387,7 +387,8 @@ function Proyectos() {
         avances: avanceParaBorr,
       },
     });
-    window.location.reload(false);
+     //****window.location.reload(false);
+     handlerCerrarOpcionesAvance();
   }
 
   function handlerCargarModalAvance() {
@@ -429,7 +430,9 @@ function Proyectos() {
       },
     });
 
-    window.location.reload(false);
+     //****window.location.reload(false);
+     setNuevaObservacion("");
+     handlerCerrarOpcionesAvance();
   }
 
   function handlerEliminarObservacionPuntual(observacion, autor) {
