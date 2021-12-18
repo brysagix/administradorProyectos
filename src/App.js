@@ -41,37 +41,30 @@ function App() {
 
   const [rolAutenti, setRolAutenti] = useState("");
   const {user,isAuthenticated}= useAuth0();
-
   {isAuthenticated ? localStorage.setItem("correo",user.email): localStorage.setItem("correo","")};
 
-  //La funciona Validar está en un js aparte
   let rolUsuario="Estudiante";
+  //La funciona Validar está en un js aparte
 
-  if(localStorage.getItem("correo")==""){
-  }
-  else{
-  console.log("Esta mierda si funciona")
-  rolUsuario  =Validar();
-  console.log(rolUsuario);
+  {/* 
+  let rolUsuario =Validar();
   let datosPerfil = new Object();
   datosPerfil= ExtraerDatosUser()
+
   localStorage.setItem("nombre",datosPerfil.nombre)
   localStorage.setItem("apellido",datosPerfil.apellido)
   localStorage.setItem("personalID",datosPerfil.personalID)
   localStorage.setItem("correo",datosPerfil.correo)
   localStorage.setItem("estado",datosPerfil.estado)
   localStorage.setItem("rol",datosPerfil.rol)
-  
-  }
+  */}
 
 
-  
-
-  if(isAuthenticated){
   return (
-  
+   
       <Router>
-       { rolUsuario=="Administrador" && localStorage.getItem("estado")=="Activo" ? <NavbarComponentAdmin /> :rolUsuario=="Lider" && localStorage.getItem("estado")=="Activo" ?  <NavbarComponentLider />: rolUsuario=="Estudiante" && localStorage.getItem("estado")=="Activo" ?  <NavbarComponentEstudiante />:<NavbarComponent /> }
+
+       {rolUsuario=="Administrador" && localStorage.getItem("estado")=="Activo" ? <NavbarComponentAdmin /> :rolUsuario=="Lider" && localStorage.getItem("estado")=="Activo" ?  <NavbarComponentLider />: rolUsuario=="Estudiante" && localStorage.getItem("estado")=="Activo" ?  <NavbarComponentEstudiante />:<NavbarComponent /> }
 
         <Switch>
           <Route path="/" exact>
@@ -187,133 +180,7 @@ function App() {
   
   );
 
-  }else {
-
-    return (
-
-<Router>
-
-      <NavbarComponent /> 
-
-        <Switch>
-          <Route path="/" exact>
-          <HomePage />  
-          </Route>
-        </Switch>
-
-        <Switch>
-          <Route path="/usuarios" exact>
-          <br />
-         <Usuarios/>
-            <br />
-          </Route>
-        </Switch>
-
-        <Switch>
-          <Route path="/usuariosLider" exact>
-          <br />
-         <UsuariosHowLider/>
-            <br />
-          </Route>
-        </Switch>
-
-        <Switch>
-          <Route path="/editPerfil" exact>
-          <br />
-          <EditPerfil/>
-            <br />
-          </Route>
-        </Switch>
-
-        <Switch>
-          <Route path="/proyectos" exact>
-            <br />
-            <Proyectos />
-            <br />
-          </Route>
-        </Switch>
-
-        <Switch>
-          <Route path="/proyectosLider" exact>
-            <br />
-            <ProyectosHowLider />
-            <br />
-          </Route>
-        </Switch>
-
-        <Switch>
-          <Route path="/proyectosEstudiante" exact>
-            <br />
-            <ProyectosHowEstudiante />
-            <br />
-          </Route>
-        </Switch>
-
-        <Switch>
-          <Route path="/inscripciones" exact>
-          <br />
-            <Inscripciones/>
-            <br />
-          </Route>
-        </Switch>
-
-        <Switch>
-          <Route path="/inscripcionesEstudiante" exact>
-          <br />
-            <InscripcionesHowEstudiante/>
-            <br />
-          </Route>
-        </Switch>
-
-        <Switch>
-          <Route path="/inscripcionesLider" exact>
-          <br />
-            <InscripcionesHowLider/>
-            <br />
-          </Route>
-        </Switch>
-
-        <Switch>
-          <Route path="/avances" exact>
-            <br />
-            <Avances />
-            <br />
-          </Route>
-        </Switch>
-
-        <Switch>
-          <Route path="/avancesLider" exact>
-            <br />
-            <AvancesHowLider />
-            <br />
-          </Route>
-        </Switch>
-
-        <Switch>
-          <Route path="/avancesEstudiante" exact>
-            <br />
-            <AvancesHowEstudiante />
-            <br />
-          </Route>
-        </Switch>
-
-        <Switch>
-          <Route path="/forbiden" exact>
-            <br />
-            <Forbiden/>
-            <br />
-          </Route>
-        </Switch>
-
-      </Router>
-
-    );
-
-  }
-
   //{ isAuthenticated ? <Usuarios/>: <Redirect to ="/forbiden"/> }
 }
-
-
 
 export default App;

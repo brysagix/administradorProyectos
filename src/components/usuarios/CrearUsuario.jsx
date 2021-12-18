@@ -39,6 +39,20 @@ function CrearUsuario() {
     },
   ] = useMutation(CREATE_USERS);
 
+
+  let rolUsuario =Validar();
+  
+  let datosPerfil = new Object();
+  datosPerfil= ExtraerDatosUser()
+
+  localStorage.setItem("nombre",datosPerfil.nombre)
+  localStorage.setItem("apellido",datosPerfil.apellido)
+  localStorage.setItem("personalID",datosPerfil.personalID)
+  localStorage.setItem("correo",datosPerfil.correo)
+  localStorage.setItem("estado",datosPerfil.estado)
+  localStorage.setItem("rol",datosPerfil.rol)
+  
+
   return (
     <Container>
       <h2>Crear Usuario</h2>
