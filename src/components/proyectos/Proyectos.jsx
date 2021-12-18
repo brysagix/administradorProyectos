@@ -31,10 +31,21 @@ function Proyectos() {
   const [habilitado, setHabilitado] = useState("Inactivo");
 
   const { user, isAuthenticated } = useAuth0();
-
-
   const { loading, error, data } = useQuery(GET_PROJECTS);
   
+  
+  /*
+  const [proy, setProy] = useState();
+
+  useEffect(() => {
+    setProy(data);
+  }, [data]);
+*/
+
+
+
+  const [proy, setProy] = useState();
+
   const [
     createProject,
     {
@@ -324,6 +335,8 @@ function Proyectos() {
     setInvisibleBotonInsertar(false);
     setVarShow(true);
     setCanDatos(data.proyectos.length + 1);
+
+
   }
 
   function handlerCerrarModal() {
@@ -369,6 +382,7 @@ function Proyectos() {
         nombre: keyValue,
       },
     });
+
      //****window.location.reload(false);
   }
 

@@ -42,7 +42,7 @@ function App() {
   const [rolAutenti, setRolAutenti] = useState("");
   const {user,isAuthenticated}= useAuth0();
   {isAuthenticated ? localStorage.setItem("correo",user.email): localStorage.setItem("correo","")};
-
+  
   localStorage.setItem("test","Hola")
   let rolUsuario;
   //La funciona Validar está en un js aparte

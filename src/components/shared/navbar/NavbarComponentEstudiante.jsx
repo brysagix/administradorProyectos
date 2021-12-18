@@ -19,7 +19,7 @@ return(
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
   <div class="container-fluid">
     
-    <a class="navbar-brand">Plataforma de Proyectos para Estudiante</a>
+    <a class="navbar-brand">P</a>
     
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
