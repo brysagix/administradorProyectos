@@ -15,6 +15,9 @@ import { CREATE_USERS } from "../../graphql/Mutation.js";
 
 import { useAuth0 } from "@auth0/auth0-react";
 
+import Validar from "../../functions/Validar.js"
+import ExtraerDatosUser from "../../functions//ExtraerDatosUser.js"
+
 function CrearUsuario() {
   //const [usuarios, setUsuarios] = useState([]);
 
@@ -51,7 +54,7 @@ function CrearUsuario() {
   localStorage.setItem("correo",datosPerfil.correo)
   localStorage.setItem("estado",datosPerfil.estado)
   localStorage.setItem("rol",datosPerfil.rol)
-  
+
 
   return (
     <Container>
