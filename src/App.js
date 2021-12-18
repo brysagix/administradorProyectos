@@ -44,11 +44,13 @@ function App() {
   {isAuthenticated ? localStorage.setItem("correo",user.email): localStorage.setItem("correo","")};
 
   //La funciona Validar está en un js aparte
-  let rolUsuario =Validar();
+  let rolUsuario;
+
+  {isAuthenticated ? rolUsuario =Validar() : rolUsuario="Estudiante"};
 
   let datosPerfil = new Object();
+  
   datosPerfil= ExtraerDatosUser()
-
   localStorage.setItem("nombre",datosPerfil.nombre)
   localStorage.setItem("apellido",datosPerfil.apellido)
   localStorage.setItem("personalID",datosPerfil.personalID)
