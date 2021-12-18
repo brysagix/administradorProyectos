@@ -21,15 +21,12 @@ return(
     
     <a class="navbar-brand">Plataforma de Proyectos para Estudiante</a>
     
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
 
-    <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav" >
         <li class="nav-item">
-          <Link to="/" className="nav-link active" aria-current="page" aria-haspopup="true" aria-expanded="false">Home</Link>
+          <Link to="/" className="nav-link active" aria-current="page" >Home</Link>
         </li>
 
         <li class="nav-item">
