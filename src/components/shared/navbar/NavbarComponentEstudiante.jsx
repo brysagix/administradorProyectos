@@ -16,7 +16,7 @@ return(
 
 <>
 
-<nav class="navbar  navbar-dark bg-dark" >
+<nav class="navbar navbar-expand navbar-dark bg-dark" >
   <div class="container-fluid">
     
     <a class="navbar-brand">Plataforma de Proyectos para Estudiante</a>
