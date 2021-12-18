@@ -8,6 +8,7 @@ import { useQuery, useMutation } from "@apollo/react-hooks";
 import { GET_PROJECTS, GET_PROJECTS_LIDER } from "../../graphql/Queries.js";
 import { CREATE_PROJECT,DELETE_PROJECT,UPDATE_PROJECT } from "../../graphql/Mutation.js";
 import { useAuth0 } from "@auth0/auth0-react";
+
 import Validar from "../../functions/Validar.js";
 import ExtraerDatosUser from "../../functions/ExtraerDatosUser";
 
