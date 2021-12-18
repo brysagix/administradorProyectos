@@ -45,8 +45,9 @@ function App() {
 
   //La funciona Validar está en un js aparte
   let rolUsuario;
-
-  {isAuthenticated ? rolUsuario =Validar() : rolUsuario="Estudiante"};
+  if(localStorage.getItem("correo")==""){
+  rolUsuario  ="Estudiante";}
+  else{rolUsuario  =Validar();}
 
   let datosPerfil = new Object();
   
