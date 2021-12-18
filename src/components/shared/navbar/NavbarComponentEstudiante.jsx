@@ -19,12 +19,12 @@ return(
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
   <div class="container-fluid">
     
-    <a class="navbar-brand">P</a>
+    <a class="navbar-brand">Plataforma de Proyectos para Estudiante</a>
     
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
 
-      <ul class="navbar-nav">
+      <ul class="navbar-nav mr-auto">
 
 
         <li class="nav-item">
