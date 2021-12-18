@@ -47,6 +47,17 @@ function App() {
   let rolUsuario;
   //La funciona Validar está en un js aparte
 
+  let datosPerfil = new Object();
+  datosPerfil= ExtraerDatosUser();
+  
+  localStorage.setItem("nombre",datosPerfil.nombre);
+  localStorage.setItem("apellido",datosPerfil.apellido);
+  localStorage.setItem("personalID",datosPerfil.personalID);
+  localStorage.setItem("correo",datosPerfil.correo);
+  localStorage.setItem("estado",datosPerfil.estado);
+  localStorage.setItem("rol",datosPerfil.rol);
+
+
   {/* 
   let rolUsuario =Validar();
   let datosPerfil = new Object();
@@ -182,6 +193,13 @@ function App() {
   );
 
   //{ isAuthenticated ? <Usuarios/>: <Redirect to ="/forbiden"/> }
+
+
+
+
+    
+  
+
 }
 
 export default App;
