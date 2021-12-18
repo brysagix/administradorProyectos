@@ -45,16 +45,10 @@ function App() {
   {isAuthenticated ? localStorage.setItem("correo",user.email): localStorage.setItem("correo","")};
 
   //La funciona Validar está en un js aparte
-  let rolUsuario;
+  let rolUsuario="Estudiante";
 
   if(localStorage.getItem("correo")==""){
-  
-  console.log("Esta mierda no funciona")
-  rolUsuario  ="Estudiante";
-  console.log(rolUsuario);
-
-}
-
+  }
   else{
   console.log("Esta mierda si funciona")
   rolUsuario  =Validar();
@@ -67,7 +61,6 @@ function App() {
   localStorage.setItem("correo",datosPerfil.correo)
   localStorage.setItem("estado",datosPerfil.estado)
   localStorage.setItem("rol",datosPerfil.rol)
-  
   
   }
 
