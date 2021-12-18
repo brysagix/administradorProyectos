@@ -49,7 +49,6 @@ function App() {
 
   let datosPerfil = new Object();
   datosPerfil= ExtraerDatosUser();
-  
   localStorage.setItem("nombre",datosPerfil.nombre);
   localStorage.setItem("apellido",datosPerfil.apellido);
   localStorage.setItem("personalID",datosPerfil.personalID);
@@ -76,7 +75,7 @@ function App() {
    
       <Router>
 
-       {rolUsuario=="Administrador" && localStorage.getItem("estado")=="Activo" ? <NavbarComponentAdmin /> :rolUsuario=="Lider" && localStorage.getItem("estado")=="Activo" ?  <NavbarComponentLider />: rolUsuario=="Estudiante" && localStorage.getItem("estado")=="Activo" ?  <NavbarComponentEstudiante />:<NavbarComponent /> }
+       {localStorage.getItem("rol")=="Administrador" && localStorage.getItem("estado")=="Activo" ? <NavbarComponentAdmin /> :localStorage.getItem("rol")=="Lider" && localStorage.getItem("estado")=="Activo" ?  <NavbarComponentLider />: localStorage.getItem("rol")=="Estudiante" && localStorage.getItem("estado")=="Activo" ?  <NavbarComponentEstudiante />:<NavbarComponent /> }
 
         <Switch>
           <Route path="/" exact>
