@@ -47,10 +47,10 @@ function App() {
   let rolUsuario;
   if(localStorage.getItem("correo")==""){
   rolUsuario  ="Estudiante";}
-  else{rolUsuario  =Validar();}
 
-  let datosPerfil = new Object();
+  else{rolUsuario  =Validar();
   
+  let datosPerfil = new Object();
   datosPerfil= ExtraerDatosUser()
   localStorage.setItem("nombre",datosPerfil.nombre)
   localStorage.setItem("apellido",datosPerfil.apellido)
@@ -58,6 +58,12 @@ function App() {
   localStorage.setItem("correo",datosPerfil.correo)
   localStorage.setItem("estado",datosPerfil.estado)
   localStorage.setItem("rol",datosPerfil.rol)
+  
+  
+  
+  }
+
+
   
 
   if(isAuthenticated){
