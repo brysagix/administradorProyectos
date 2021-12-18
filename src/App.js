@@ -41,15 +41,24 @@ function App() {
 
   const [rolAutenti, setRolAutenti] = useState("");
   const {user,isAuthenticated}= useAuth0();
+
   {isAuthenticated ? localStorage.setItem("correo",user.email): localStorage.setItem("correo","")};
 
   //La funciona Validar está en un js aparte
   let rolUsuario;
-  if(localStorage.getItem("correo")==""){
-  rolUsuario  ="Estudiante";}
 
-  else{rolUsuario  =Validar();
+  if(localStorage.getItem("correo")==""){
   
+  console.log("Esta mierda no funciona")
+  rolUsuario  ="Estudiante";
+  console.log(rolUsuario);
+
+}
+
+  else{
+  console.log("Esta mierda si funciona")
+  rolUsuario  =Validar();
+  console.log(rolUsuario);
   let datosPerfil = new Object();
   datosPerfil= ExtraerDatosUser()
   localStorage.setItem("nombre",datosPerfil.nombre)
@@ -58,7 +67,6 @@ function App() {
   localStorage.setItem("correo",datosPerfil.correo)
   localStorage.setItem("estado",datosPerfil.estado)
   localStorage.setItem("rol",datosPerfil.rol)
-  
   
   
   }
