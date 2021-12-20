@@ -167,7 +167,21 @@ export const DELETE_AVANCE = gql`
   mutation deleteAvance ($nombre:String!,$avances:String!){ 
     deleteAvance(
       nombre:$nombre,
+      avances:$avances
+      )
+  {
+    _id
+  }
+  }
+`;
+
+
+export const EDIT_AVANCE = gql`
+  mutation editAvance ($nombre:String!,$avances:String!,$nuevoAvance:String!){ 
+    editAvance(
+      nombre:$nombre,
       avances:$avances,
+      nuevoAvance:$nuevoAvance
       )
   {
     _id

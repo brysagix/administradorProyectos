@@ -153,11 +153,13 @@ function Proyectos() {
                     <td>{datos.nombre}</td>
                     <td>{datos.objPrincipal}</td>
                     <td>{datos.objSecundario}</td>
+                    <td>{datos.habilitado}</td>
 
                     <td>
                       <Button
                         color="primary"
                         onClick={() => handlerCargarAvances(datos.nombre)}
+                        disabled={datos.habilitado=="Inactivo"}
                       >
                         Ver Avances
                       </Button>
@@ -337,7 +339,7 @@ function Proyectos() {
       },
     });
 
-    window.location.reload(false);
+    //***window.location.reload(false);
     setVarShow(false);
   }
 

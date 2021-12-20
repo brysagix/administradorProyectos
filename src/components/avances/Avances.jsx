@@ -26,6 +26,8 @@ import {
   DELETE_AVANCE,
   ADD_OBSERVATION,
   DELETE_OBSERVATION,
+
+  EDIT_AVANCE
 } from "../../graphql/Mutation.js";
 import { useAuth0 } from "@auth0/auth0-react";
 import Validar from "../../functions/Validar.js";
@@ -99,6 +101,18 @@ function Proyectos() {
     },
   ] = useMutation(DELETE_AVANCE);
 
+
+  const [
+    editAvance,
+    {
+      data: dataEditAvance,
+      error: errorEditAvance,
+      loading: loadingEditAvance,
+    },
+  ] = useMutation(EDIT_AVANCE);
+
+  
+
   const [
     agregarObservacion,
     {
@@ -136,6 +150,7 @@ function Proyectos() {
                 <th>Nombre del proyecto</th>
                 <th>Objetivo Principal</th>
                 <th>Objetivos Secundarios</th>
+                <th>Estado</th>
               </tr>
             </thead>
 
@@ -146,11 +161,13 @@ function Proyectos() {
                     <td>{datos.nombre}</td>
                     <td>{datos.objPrincipal}</td>
                     <td>{datos.objSecundario}</td>
+                    <td>{datos.habilitado}</td>
 
                     <td>
                       <Button
                         color="primary"
                         onClick={() => handlerCargarAvances(datos.nombre)}
+                        disabled={datos.habilitado=="Inactivo"}
                       >
                         Ver Avances
                       </Button>
@@ -317,6 +334,15 @@ function Proyectos() {
               Agregar Observación
             </Button>
 
+            <Button
+              color="primary"
+              onClick={() =>
+                handlerEditarAvance(proyectoBuscado, avanceParaBorrar)
+              }
+            >
+              Editar Avance
+            </Button>
+
             {/*
             <Button
               color="primary"
@@ -383,6 +409,25 @@ function Proyectos() {
      handlerCerrarOpcionesAvance();
   }
 
+
+  function handlerEditarAvance(proyectoBusc, avanceParaBorr) {
+    alert(proyectoBusc)
+    alert(avanceParaBorr)
+    alert(nuevaObservacion)
+
+    editAvance({
+      variables: {
+        nombre: proyectoBusc,
+        avances: avanceParaBorr,
+        nuevoAvance:"Modificar7"
+      },
+    });
+     //****window.location.reload(false);
+     handlerCerrarOpcionesAvance();
+  }
+
+
+
   function handlerCargarModalAvance() {
     setVarShow(true);
     setDatosAvance("");
@@ -398,7 +443,7 @@ function Proyectos() {
       },
     });
 
-    window.location.reload(false);
+    //***window.location.reload(false);
     setVarShow(false);
   }
 
