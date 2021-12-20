@@ -4,13 +4,14 @@ import React, { Fragment,Redirect, useState, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-
 import HomePage from "./components/home/HomePage";
 
 import NavbarComponent from "./components/shared/navbar/NavbarComponent";
 import NavbarComponentEstudiante from "./components/shared/navbar/NavbarComponentEstudiante";
 import NavbarComponentLider from "./components/shared/navbar/NavbarComponentLider";
 import NavbarComponentAdmin from "./components/shared/navbar/NavbarComponentAdmin";
+
+import Footer from "./components/shared/footer/Footer";
 
 import Usuarios from "./components/usuarios/Usuarios";
 import UsuariosHowLider from "./components/usuarios/UsuariosHowLider";
@@ -72,7 +73,7 @@ function App() {
 
 
   return (
-   
+    <Fragment>
       <Router>
 
        {localStorage.getItem("rol")=="Administrador" && localStorage.getItem("estado")=="Activo" ? <NavbarComponentAdmin /> :localStorage.getItem("rol")=="Lider" && localStorage.getItem("estado")=="Activo" ?  <NavbarComponentLider />: localStorage.getItem("rol")=="Estudiante" && localStorage.getItem("estado")=="Activo" ?  <NavbarComponentEstudiante />:<NavbarComponent /> }
@@ -187,7 +188,12 @@ function App() {
           </Route>
         </Switch>
 
+
+        <Footer/>
+
       </Router>
+      
+      </Fragment>
   
   );
 

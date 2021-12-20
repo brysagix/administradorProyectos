@@ -1,4 +1,4 @@
-import React from "react";
+import {React,Fragment} from "react";
 import { Carousel, Container, Row, Col } from "react-bootstrap";
 import CrearUsuario from '../usuarios/CrearUsuario';
 
@@ -9,15 +9,11 @@ import myimage3 from "../../assets/images/imagen3.jpg"
 function Contenido() {
   return (
     //<Container>
-
-    <div>
       <Row >
         <Col sm={9}>
-
-
           <Carousel>
             <Carousel.Item>
-              <img width={900} height={420} alt="900x500"
+              <img width={900} height={500} alt="900x500"
                 className="d-block w-100"
                 alt="First slide"
                 src={myimage1}
@@ -30,7 +26,7 @@ function Contenido() {
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-              <img width={900} height={420}
+              <img width={900} height={500}
                 className="d-block w-100"
                 alt="Second slide"
                 src={myimage2}
@@ -42,7 +38,7 @@ function Contenido() {
             </Carousel.Item>
             
             <Carousel.Item>
-              <img width={900} height={420}
+              <img width={900} height={500}
                 className="d-block w-100"
                 src={myimage3}
                 alt="Third slide"
@@ -58,7 +54,6 @@ function Contenido() {
             </Carousel.Item>
           </Carousel>
           
-
         </Col>
 
         <Col sm={3}>   
@@ -67,7 +62,7 @@ function Contenido() {
 
       </Row>
 
-  </div>
+
 
 
 

@@ -47,10 +47,8 @@ function CrearUsuario() {
 
 
   return (
-    <Container>
+    <>
       <h2>Crear Usuario</h2>
-
-      <Form>
 
       <FormGroup>
         <label>Nombre:</label>
@@ -115,11 +113,10 @@ function CrearUsuario() {
       </Button>{" "}
       {""}
 
-      </Form>
 
       {isAuthenticated ? null:<Button className="btn btn-danger" onClick={() => loginWithRedirect()}>Login</Button>}
 
-    </Container>
+    </>
   );
 
 

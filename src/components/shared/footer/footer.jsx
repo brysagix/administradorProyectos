@@ -4,51 +4,43 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 import { Button } from "react-bootstrap";
 
-function NavbarComponent() {
+function Footer() {
   const { loginWithRedirect } = useAuth0();
   const { logout } = useAuth0();
   const { user, isAuthenticated } = useAuth0();
 
   return (
-    <>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    
+      <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand">Plataforma de Proyectos</a>
 
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <Link to="/" className="nav-link active" aria-current="page">
-                  Home
+                  PQRS
                 </Link>
               </li>
+
+              <li class="nav-item">
+                <Link to="/" className="nav-link active" aria-current="page">
+                  Contáctanos
+                </Link>
+              </li>
+
+              <li class="nav-item">
+                <Link to="/" className="nav-link active" aria-current="page">
+                  Trabaja con Nosotros
+                </Link>
+              </li>
+
+
             </ul>
           </div>
 
-          <li class="nav-item">
-            {/*<Button className="btn btn-secondary" onClick={(e) =><Redirect to="/avances"/>} > {isAuthenticated ? user.name : "User"} </Button>*/}
-            {/*Link como boton */}
-            <Link to="/editPerfil" className="btn btn-primary">
-              {isAuthenticated ? user.name : "User"}
-            </Link>
-          </li>
-
-          <li class="nav-item">
-
-            {isAuthenticated ? (
-              <Button
-                className="btn btn-danger"
-                onClick={() => logOutPropio()}
-              >
-                LogOut
-              </Button>
-            ) : null}
-          </li>
-
-          
         </div>
       </nav>
-    </>
+    
   );
 
 
@@ -60,4 +52,4 @@ function NavbarComponent() {
 
 }
 
-export default NavbarComponent;
+export default Footer;
