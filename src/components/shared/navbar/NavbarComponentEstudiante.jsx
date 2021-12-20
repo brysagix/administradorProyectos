@@ -21,7 +21,7 @@ return(
     
     <a class="navbar-brand">Plataforma de Proyectos para Estudiante</a>
     
-    <div >
+    <div class="collapse navbar-collapse" id="navbarNavDropdown" >
 
       <ul class="navbar-nav" >
         <li class="nav-item">

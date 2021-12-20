@@ -339,6 +339,7 @@ function Proyectos() {
               onClick={() =>
                 handlerEditarAvance(proyectoBuscado, avanceParaBorrar)
               }
+              disabled="true"
             >
               Editar Avance
             </Button>

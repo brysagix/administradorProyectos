@@ -49,6 +49,9 @@ function CrearUsuario() {
   return (
     <Container>
       <h2>Crear Usuario</h2>
+
+      <Form>
+
       <FormGroup>
         <label>Nombre:</label>
         <input
@@ -59,6 +62,7 @@ function CrearUsuario() {
           placeholder={nombre}
         />
       </FormGroup>
+
       <FormGroup>
         <label>Apellido:</label>
         <input
@@ -87,8 +91,9 @@ function CrearUsuario() {
           type="email"
           onChange={(e) => setCorreo(e.target.value)}
           placeholder={correo}
-        />
+       />
       </FormGroup>
+      
       <FormGroup>
         <label>Rol:</label>
 
@@ -109,6 +114,8 @@ function CrearUsuario() {
         Sign Up
       </Button>{" "}
       {""}
+
+      </Form>
 
       {isAuthenticated ? null:<Button className="btn btn-danger" onClick={() => loginWithRedirect()}>Login</Button>}
 
