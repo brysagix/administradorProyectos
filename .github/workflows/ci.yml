@@ -4,13 +4,13 @@ on: [push]
 
 jobs:
   build: 
-    rund-on: ubuntu-latest
+    runs-on: ubuntu-latest
     
     steps:
     - uses: action/checkout@v1
     - name: Run a one-line script
       run: echo Hello world One line Script
-    - name: Run a multi-ñine script
+    - name: Run a multi-line script
       run: | 
-        echo Add other action    maybe test,and/or deploy
+        echo Add other action-maybe test,and/or deploy
         echo your project
