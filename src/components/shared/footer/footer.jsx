@@ -6,7 +6,7 @@ function Footer() {
 
 
   return (
-    
+    <>
       <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
 
@@ -36,9 +36,9 @@ function Footer() {
 
         </div>
       </nav>
-    
+      
+      </>
   );
-
 
 
 }
