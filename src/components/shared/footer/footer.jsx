@@ -5,9 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { Button } from "react-bootstrap";
 
 function Footer() {
-  const { loginWithRedirect } = useAuth0();
-  const { logout } = useAuth0();
-  const { user, isAuthenticated } = useAuth0();
+
 
   return (
     
@@ -43,11 +41,6 @@ function Footer() {
     
   );
 
-
-  function logOutPropio() {
-    localStorage.clear();
-    logout({ returnTo: window.location.origin })
-  }
 
 
 }
