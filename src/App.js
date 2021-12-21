@@ -11,7 +11,7 @@ import NavbarComponentEstudiante from "./components/shared/navbar/NavbarComponen
 import NavbarComponentLider from "./components/shared/navbar/NavbarComponentLider";
 import NavbarComponentAdmin from "./components/shared/navbar/NavbarComponentAdmin";
 
-import Footer from "./components/shared/footer/Footer";
+//import Footer from "./components/shared/footer/Footer";
 
 import Usuarios from "./components/usuarios/Usuarios";
 import UsuariosHowLider from "./components/usuarios/UsuariosHowLider";
@@ -26,7 +26,6 @@ import InscripcionesHowLider from "./components/inscripciones/InscripcionesHowLi
 import InscripcionesHowEstudiante from "./components/inscripciones/InscripcionesHowEstudiante";
 import Forbiden from "./components/shared/forbiden/Forbiden";
 import EditPerfil from "./components/editarPerfil/EditPerfil";
-
 
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -189,7 +188,7 @@ function App() {
         </Switch>
 
 
-        <Footer/>
+       
 
       </Router>
       
