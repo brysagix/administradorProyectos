@@ -21,9 +21,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
+    - run: yarn install
     - run: yarn run build --if-present
-    - run: npm test
+    - run: yarn test
 
   deploy: ## <-- this is the new stuff
     needs: build
