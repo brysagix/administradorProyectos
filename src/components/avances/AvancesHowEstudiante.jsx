@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Button,
   Container,
   Table,
-  FormGroup,
-  Dropdown,
-  DropdownButton,
+  FormGroup
+
 } from "react-bootstrap";
 
 import Forbiden from "../shared/forbiden/Forbiden";
@@ -13,16 +12,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import { useQuery, useMutation } from "@apollo/react-hooks";
 import {
-  GET_PROJECTS,
-  GET_PROJECTS_AVANCES,
   GET_ONE_PROJECTS_AVANCES,
   GET_OBSERVACIONES_BY_AVANCE,
   GET_PROJECTS_BY_ALUMNO
 } from "../../graphql/Queries.js";
 import {
-  CREATE_PROJECT,
-  DELETE_PROJECT,
-  UPDATE_PROJECT,
   ADD_AVANCE,
   DELETE_AVANCE,
   ADD_OBSERVATION,
@@ -35,22 +29,6 @@ function Proyectos() {
   //const [usuarios, setUsuarios] = useState([]);
   const [varShow, setVarShow] = useState(false);
   const [varShowAvance, setVarShowAvance] = useState(false);
-
-  const [invisibleBotonActualizar, setInvisibleBotonActualizar] =
-    useState(true);
-  const [invisibleBotonInsertar, setInvisibleBotonInsertar] = useState(true);
-
-  const [canDatos, setCanDatos] = useState();
-
-  const [nombreProyecto, setNombreProyecto] = useState("");
-  const [iprincipal, setIprincipal] = useState("");
-  const [investigadores, setInvestigadores] = useState("");
-  const [objPrincipal, setObjPrincipal] = useState("");
-  const [objSecundario, setObjSecundario] = useState("");
-  const [estadoProyecto, setEstadoProyecto] = useState("Detenido");
-  const [presupuesto, setPresupuesto] = useState(0);
-  const [avances, setAvances] = useState("");
-  const [habilitado, setHabilitado] = useState("Inactivo");
 
   const [proyectoBuscado, setProyectoBuscado] = useState("");
   const [datosAvance, setDatosAvance] = useState("");

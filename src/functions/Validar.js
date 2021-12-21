@@ -1,10 +1,9 @@
-import { useQuery, useMutation } from "@apollo/react-hooks";
-import { GET_USERS_STUDENTS,VALID_USER,GET_USERS} from "../graphql/Queries";
+import { useQuery } from "@apollo/react-hooks";
+import { VALID_USER} from "../graphql/Queries";
 
 
 export default function Validar()  {
 
-    const useremail= localStorage.getItem("correo");
 
     //Validando datos del usuario autenticado
     const  {data: dataUsuarioEncontrado,error: errorUsuarioEncontrado,loading: loadingUsuarioEncontrado} =  useQuery(VALID_USER, {

@@ -1,4 +1,4 @@
-import React, { Fragment,Redirect, useState, useEffect } from "react";
+import React, { Fragment } from "react";
 
 
 import "./App.css";
@@ -28,24 +28,14 @@ import Forbiden from "./components/shared/forbiden/Forbiden";
 import EditPerfil from "./components/editarPerfil/EditPerfil";
 
 import { useAuth0 } from "@auth0/auth0-react";
-
-import { useQuery, useMutation } from "@apollo/react-hooks";
-import { GET_USERS_STUDENTS,VALID_USER,GET_USERS} from "./graphql/Queries.js";
-import { CREATE_USERS,DELETE_USERS,UPDATE_USER } from "./graphql//Mutation.js";
-
-import Validar from "./functions/Validar.js"
 import ExtraerDatosUser from "./functions/ExtraerDatosUser.js"
 
 function App() {
 
-
-  const [rolAutenti, setRolAutenti] = useState("");
   const {user,isAuthenticated}= useAuth0();
   {isAuthenticated ? localStorage.setItem("correo",user.email): localStorage.setItem("correo","")};
   
   localStorage.setItem("test","Hola")
-  let rolUsuario;
-  //La funciona Validar está en un js aparte
 
   let datosPerfil = new Object();
   datosPerfil= ExtraerDatosUser();
@@ -57,18 +47,6 @@ function App() {
   localStorage.setItem("rol",datosPerfil.rol);
 
 
-  {/* 
-  let rolUsuario =Validar();
-  let datosPerfil = new Object();
-  datosPerfil= ExtraerDatosUser()
-
-  localStorage.setItem("nombre",datosPerfil.nombre)
-  localStorage.setItem("apellido",datosPerfil.apellido)
-  localStorage.setItem("personalID",datosPerfil.personalID)
-  localStorage.setItem("correo",datosPerfil.correo)
-  localStorage.setItem("estado",datosPerfil.estado)
-  localStorage.setItem("rol",datosPerfil.rol)
-  */}
 
 
   return (

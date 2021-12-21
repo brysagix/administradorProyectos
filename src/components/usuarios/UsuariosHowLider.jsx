@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Card, Button, Container, Table, FormGroup,Dropdown,DropdownButton } from "react-bootstrap";
+import React, { useState } from "react";
+import {  Button, Container, Table, FormGroup,Dropdown,DropdownButton } from "react-bootstrap";
 import Forbiden from "../shared/forbiden/Forbiden";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
@@ -7,9 +7,7 @@ import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 import { useQuery, useMutation } from "@apollo/react-hooks";
 import { GET_USERS_STUDENTS } from "../../graphql/Queries.js";
-import { VALID_USER } from "../../graphql/Queries.js";
-import { CREATE_USERS } from "../../graphql/Mutation.js";
-import { DELETE_USERS } from "../../graphql/Mutation.js";
+
 import { UPDATE_USER } from "../../graphql/Mutation.js";
 
 import { useAuth0 } from "@auth0/auth0-react";
@@ -21,7 +19,6 @@ function UsuariosHowLider() {
   //const [usuarios, setUsuarios] = useState([]);
   const [varShow, setVarShow] = useState(false);
   const [invisibleBotonActualizar, setInvisibleBotonActualizar] =useState(true);
-  const [invisibleBotonInsertar, setInvisibleBotonInsertar] = useState(true);
 
   const [nombre, setNombre] = useState();
   const [apellido, setApellido] = useState();
@@ -29,14 +26,8 @@ function UsuariosHowLider() {
   const [correo, setCorreo] = useState();
   const [rol, setRol] = useState();
   const [estado, setEstado] = useState();
-  const [canDatos, setCanDatos] = useState();
 
-  const [userAutenti, setUserAutenti] = useState("");
-  const [correoAutenti, setCorreoAutenti] = useState("bryan.garcia@correounivalle.edu.co");
-  const [estadoAutenti, setEstadoAutenti] = useState("");
-  const [rolAutenti, setRolAutenti] = useState("");
-
-  const { user, isAuthenticated } = useAuth0();
+  const { isAuthenticated } = useAuth0();
 
   //Parte Graphql
 

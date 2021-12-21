@@ -5,10 +5,7 @@ import App from './App';
 import { Auth0Provider } from '@auth0/auth0-react';
 
 import {
-  ApolloClient,
-  InMemoryCache,
   ApolloProvider,
-  gql,
 } from "@apollo/client";
 
 import { client } from "./graphql/ApolloClient.js";

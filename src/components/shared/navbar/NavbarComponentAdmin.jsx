@@ -1,11 +1,10 @@
 import React from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
 import { Button } from "react-bootstrap";
 
 function NavbarComponent() {
-  const { loginWithRedirect } = useAuth0();
   const { logout } = useAuth0();
   const { user, isAuthenticated } = useAuth0();
 

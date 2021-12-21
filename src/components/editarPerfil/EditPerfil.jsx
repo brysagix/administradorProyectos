@@ -1,15 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { Card, Button, Container, Table, FormGroup } from "react-bootstrap";
-import { Link, Redirect } from "react-router-dom";
+import React from "react";
+import { Button, Container, FormGroup } from "react-bootstrap";
 
-import Forbiden from "../shared/forbiden/Forbiden";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
-import { useQuery, useMutation } from "@apollo/react-hooks";
-import { GET_USERS } from "../../graphql/Queries.js";
+import {  useMutation } from "@apollo/react-hooks";
 import { UPDATE_USER } from "../../graphql/Mutation.js";
 
 import { useAuth0 } from "@auth0/auth0-react";
@@ -21,15 +17,8 @@ import ExtraerDatosUser from "../../functions/ExtraerDatosUser.js"
 
 function EditPerfil() {
 
-  const [nombre, setNombre] = useState();
-  const [apellido, setApellido] = useState();
-  const [personalID, setPersonalID] = useState();
-  const [correo, setCorreo] = useState();
-  const [rol, setRol] = useState();
-  const [estado, setEstado] = useState();
 
   const {user,isAuthenticated}= useAuth0();
-
 
 
   const [

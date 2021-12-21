@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, Button, Container, Table,FormGroup,Dropdown,DropdownButton  } from "react-bootstrap";
+import {  Button, Container, Table,FormGroup,Dropdown,DropdownButton  } from "react-bootstrap";
 
 import Forbiden from "../shared/forbiden/Forbiden";
 
@@ -9,8 +9,6 @@ import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 import { useQuery, useMutation } from "@apollo/react-hooks";
 import { GET_USERS } from "../../graphql/Queries.js";
-import { GET_USERS_STUDENTS } from "../../graphql/Queries.js";
-import { VALID_USER } from "../../graphql/Queries.js";
 import { CREATE_USERS } from "../../graphql/Mutation.js";
 import { DELETE_USERS } from "../../graphql/Mutation.js";
 import { UPDATE_USER } from "../../graphql/Mutation.js";
@@ -38,12 +36,7 @@ function Usuarios() {
   const [estado, setEstado] = useState("Pendiente");
   const [canDatos, setCanDatos] = useState();
 
-  const [userAutenti, setUserAutenti] = useState("");
-  const [correoAutenti, setCorreoAutenti] = useState("bryan.garcia@correounivalle.edu.co");
-  const [estadoAutenti, setEstadoAutenti] = useState("");
-  const [rolAutenti, setRolAutenti] = useState("");
-
-  const {user,isAuthenticated}= useAuth0();
+  const {isAuthenticated}= useAuth0();
 
 
   //Parte Graphql
@@ -79,29 +72,6 @@ function Usuarios() {
       loading: loadingActualizarUsuario,
     },
   ] = useMutation(UPDATE_USER);
-
-
-  /*
-  function Validar()  {
-
-    const useremail= user['email'];
-    console.log(user);
-    console.log(useremail);
-
-    //Validando datos del usuario autenticado
-    const  {data: dataUsuarioEncontrado,error: errorUsuarioEncontrado,loading: loadingUsuarioEncontrado} =  useQuery(VALID_USER, {
-    //variables: {correo:"lp@gmail.com"} 
-    variables: {correo:useremail}
-    });
-
-
-    let vari;
-    loadingUsuarioEncontrado ? console.log("cargando Usuario Buscado") : vari= dataUsuarioEncontrado['validarUsuario'].rol;
-    //setEstadoAutenti(dataUsuarioEncontrado);
-    return(vari)
-  }
-   
-  */
 
 
   /*--------------------------------*/
@@ -410,16 +380,6 @@ else{
 
   function handlerActualizarPage() {
     window.location.reload(false);
-  }
-
-  function handlerSearch() {
-/* 
-    validando({
-      variables: {
-        correo: correoAutenti,
-      },
-    });
-*/
   }
 
 

@@ -1,22 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Button,
-  Container,
   FormGroup,
-  Form,
   Dropdown,
-  InputGroup,
-  FormControl,
   DropdownButton,
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useQuery, useMutation } from "@apollo/react-hooks";
+import { useMutation } from "@apollo/react-hooks";
 import { CREATE_USERS } from "../../graphql/Mutation.js";
 
 import { useAuth0 } from "@auth0/auth0-react";
 
-import Validar from "../../functions/Validar.js"
-import ExtraerDatosUser from "../../functions//ExtraerDatosUser.js"
 
 function CrearUsuario() {
   //const [usuarios, setUsuarios] = useState([]);
@@ -29,7 +23,7 @@ function CrearUsuario() {
 
   const { loginWithRedirect } = useAuth0();
   const { logout } = useAuth0();
-  const {user,isAuthenticated}= useAuth0();
+  const {isAuthenticated}= useAuth0();
 
 
 

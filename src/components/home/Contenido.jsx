@@ -1,5 +1,5 @@
-import {React,Fragment} from "react";
-import { Carousel, Container, Row, Col } from "react-bootstrap";
+import {React} from "react";
+import { Carousel, Row, Col } from "react-bootstrap";
 import CrearUsuario from '../usuarios/CrearUsuario';
 
 import myimage1 from "../../assets/images/imagen1.jpg"
