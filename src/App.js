@@ -11,7 +11,7 @@ import NavbarComponentEstudiante from "./components/shared/navbar/NavbarComponen
 import NavbarComponentLider from "./components/shared/navbar/NavbarComponentLider";
 import NavbarComponentAdmin from "./components/shared/navbar/NavbarComponentAdmin";
 
-//import Footer from "./components/shared/footer/Footer";
+import Footer from "./components/shared/footer/Footer";
 
 import Usuarios from "./components/usuarios/Usuarios";
 import UsuariosHowLider from "./components/usuarios/UsuariosHowLider";
