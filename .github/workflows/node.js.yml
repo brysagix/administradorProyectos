@@ -21,9 +21,21 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: yarn install
-    - run: yarn run build --if-present
-    - run: yarn test
+
+    - name: yarn install
+      run: |
+        yarn install
+
+    - name: yarn test
+      run: |
+        yarn test
+      env:
+        CI: true
+
+    - name: yarn build
+      run: |
+        yarn run build --if-present
+
 
   deploy: ## <-- this is the new stuff
     needs: build
@@ -35,3 +47,6 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "demo-front-ciclo4"
           heroku_email: "bryan.garcia@correounivalle.edu.co"
+
+
+   
